@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #eaf0f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Card centralizado usando main */
+.card-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 480px;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #333;
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+
+/* Formulário e Inputs */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.linha-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.linha-inputs input[type="text"] {
+    flex: 2;
+}
+
+.linha-inputs input[type="number"] {
+    flex: 1;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    width: 100%;
+}
+
+input:focus {
+    border-color: #4caf50;
+}
+
+/* Botões */
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: filter 0.2s;
+    width: 100%;
+}
+
+button:hover {
+    filter: brightness(0.9);
+}
+
+.btn-green {
+    background-color: #5bb85d;
+    color: white;
+}
+
+.btn-blue {
+    background-color: #7b8fa1;
+    color: white;
+    width: auto;
+    white-space: nowrap;
+    padding: 10px 16px;
+}
+
+.btn-red {
+    background-color: #e54d42;
+    color: white;
+    margin-top: 15px;
+}
+
+/* Filtro */
+.area-filtro {
+    margin-bottom: 20px;
+}
+
+.area-filtro label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+.linha-filtro {
+    display: flex;
+    gap: 10px;
+}
+
+/* Tabela */
+.tabela-despesas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.tabela-despesas th {
+    text-align: left;
+    padding: 8px 4px;
+    color: #333;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+}
+
+.tabela-despesas td {
+    padding: 8px 4px;
+    color: #555;
+    border-bottom: 1px solid #eee;
+}
+
+.sem-registro {
+    color: #666;
+    font-style: italic;
+    padding: 12px 0;
+}
+
+/* Caixas de Total */
+.box-total {
+    display: block;
+    background-color: #d1ecf1;
+    color: #0c5460;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+/* Estilos específicos para o Exercício 1 */
+.container-jogo {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.status-jogo {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.area-jogo {
+    position: relative;
+    width: 450px;
+    height: 350px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    background-color: #fcfcfc;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.alvo-circulo {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #e52521;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    user-select: none;
+}

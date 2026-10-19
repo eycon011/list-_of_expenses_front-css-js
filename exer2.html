@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despesas com Filtro por Data</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="card-container">
+        <h2>Controle Diário de Gastos</h2>
+
+        <!-- Formulário de Entrada -->
+        <form id="formDespesa">
+            <section class="linha-inputs">
+                <input type="text" id="inputDescricao" placeholder="Descrição" required>
+                <input type="number" id="inputValor" placeholder="Valor" step="0.01" min="0.01" required>
+            </section>
+
+            <input type="date" id="inputData" required>
+
+            <button type="submit" class="btn-green">Adicionar Despesa</button>
+        </form>
+
+        <!-- Seção de Filtro por Data -->
+        <section class="area-filtro">
+            <label for="inputFiltroData">Filtrar despesas por data:</label>
+            <section class="linha-filtro">
+                <input type="date" id="inputFiltroData">
+                <button type="button" id="btnLimparFiltro" class="btn-blue">Ver Todas</button>
+            </section>
+        </section>
+
+        <!-- Tabela de Lançamentos -->
+        <table class="tabela-despesas">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaCorpo">
+                <!-- Linhas geradas via JavaScript -->
+            </tbody>
+        </table>
+
+        <!-- Banner do Total com tag <output> -->
+        <output class="box-total">
+            Total RS <span id="totalAcumulado">0.00</span>
+        </output>
+
+        <!-- Botão de Limpar Tudo -->
+        <button type="button" id="btnExpurgarDados" class="btn-red">Excluir Todas as Despesas</button>
+    </main>
+
+    <script src="script/exer2.js"></script>
+</body>
+
+</html>
